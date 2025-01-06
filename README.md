@@ -2,6 +2,7 @@
 
 A collection of beginner friendly projects I have completed within the past few days. This is giving me a way to help grasp programming fundamentals. 
 
+<<<<<<< HEAD
 Within in the series I have started to learn how to store data files (txt,csv) locally in order to have some kind of "database". I say this in quotes as from my next project (T-Quizzil [a cyber security based quiz game]), I hope to have included an actual database.
 
 Ill add README files to each project some time in the future.
@@ -9,6 +10,15 @@ Ill add README files to each project some time in the future.
 ----------------------------------------------------------------------------------------------------------------------
 
 If you are actually reading this, firstly, thank you. Secondly, any advice is welcome.
+=======
+Within in the series I have started to learn how to store data files (txt,csv,json) locally in order to have some kind of "database". I say this in quotes as from my next project (t-quizzil [a cyber security quiz game]), I hope to have included an actual database.
+
+Ill add README files to each project some time in the future.
+
+Current project: T-Quizzil
+
+If you are actually reading this, welcome and thank you.
+>>>>>>> 14f1072a4537c5b19bbb542679cb07c580ff839f
 
 ----------------------------------------------------------------------------------------------------------------------
 
