@@ -18,3 +18,9 @@ The repo 'quiz' was my intial thoughts on how to approach the game with a SQLite
 
 Repo 'quiz2' will contain the new 'T-Quizzil' project.
 
+UPDATE 1.1
+
+Afetr stumping on how to generate 50 questions for each category easily, I went to google for the solution. From there I found https://quizapi.io/ and the solution became clear because I can practice working with apis again. Another advantage is the number of questions available for each topic.
+
+With this a changes are happening to the topic choices from; Networking, Python, CySec Basics -> Linux, MySQL, Python. These changes will also help me as I am learning all three topics.
+
