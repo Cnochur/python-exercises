@@ -12,7 +12,7 @@ Ill add README files to each project some time in the future.
 
 Current project: T-Quizzil
 
-###UPDATE 1:
+UPDATE 1:
 
 The repo 'quiz' was my intial thoughts on how to approach the game with a SQLite3 database included. After the intial commit of the project i realised that i need to understand using classes better. I decided to restart the project. Complete it without a database first then add one later.
 
