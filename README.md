@@ -24,3 +24,6 @@ Afetr stumping on how to generate 50 questions for each category easily, I went 
 
 With this a changes are happening to the topic choices from; Networking, Python, CySec Basics -> Linux, MySQL, Python. These changes will also help me as I am learning all three topics.
 
+UPDATE 1.2
+
+The categories available on the api are not what expected. The new options are Linux, Code (???), Django and random. Still a few bugs in the code to iron out but it runs, and thats a start!
