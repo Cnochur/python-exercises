@@ -27,12 +27,12 @@ To-Do
 
 1 - Randomise correct_answer position.
 
-    When I call for the questions on linux, most of the correct answers end up as the first option. I think to resolve this, 
-    I need to randomise the order in which they are placed when being displayed on screen. 
+When I call for the questions on linux, most of the correct answers end up as the first option. I think to resolve this, 
+I need to randomise the order in which they are placed when being displayed on screen. 
 
 2 - Add Database
 
-    Add a database so that the players name, score, topic and time can be stored and displayed.
+Add a database so that the players name, score, topic and time can be stored and displayed.
 
 
 
