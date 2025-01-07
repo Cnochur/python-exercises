@@ -2,25 +2,15 @@
 
 A collection of beginner friendly projects I have completed within the past few days. This is giving me a way to help grasp programming fundamentals. 
 
-<<<<<<< HEAD
 Within in the series I have started to learn how to store data files (txt,csv) locally in order to have some kind of "database". I say this in quotes as from my next project (T-Quizzil [a cyber security based quiz game]), I hope to have included an actual database.
 
 Ill add README files to each project some time in the future.
 
-----------------------------------------------------------------------------------------------------------------------
-
-If you are actually reading this, firstly, thank you. Secondly, any advice is welcome.
-=======
 Within in the series I have started to learn how to store data files (txt,csv,json) locally in order to have some kind of "database". I say this in quotes as from my next project (t-quizzil [a cyber security quiz game]), I hope to have included an actual database.
 
 Ill add README files to each project some time in the future.
 
 Current project: T-Quizzil
-
-If you are actually reading this, welcome and thank you.
->>>>>>> 14f1072a4537c5b19bbb542679cb07c580ff839f
-
-----------------------------------------------------------------------------------------------------------------------
 
 UPDATE 1:
 
@@ -28,4 +18,12 @@ The repo 'quiz' was my intial thoughts on how to approach the game with a SQLite
 
 Repo 'quiz2' will contain the new 'T-Quizzil' project.
 
-----------------------------------------------------------------------------------------------------------------------
+UPDATE 1.1
+
+Afetr stumping on how to generate 50 questions for each category easily, I went to google for the solution. From there I found https://quizapi.io/ and the solution became clear because I can practice working with apis again. Another advantage is the number of questions available for each topic.
+
+With this a changes are happening to the topic choices from; Networking, Python, CySec Basics -> Linux, MySQL, Python. These changes will also help me as I am learning all three topics.
+
+UPDATE 1.2
+
+The categories available on the api are not what expected. The new options are Linux, Code (???), Django and random. Still a few bugs in the code to iron out but it runs, and thats a start!
