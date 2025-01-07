@@ -52,6 +52,25 @@ class Quiz:
 
 
             correct_answers = question["correct_answers"]
+            
+            #print(correct_answers)
+
+            '''correct_answers is a dict. After chatGPT and google i was lost. 
+            Looking at the keys in correct_answers made me realise in order to do this 
+            i would need to append the correct_answers values to the respective available_answers item.
+
+            maybe merge then to a list: 
+
+                    new_question_list = [(q1,[a1,a2,a3,a4],a1), (q2,[a1,a2,a3,a4],a3)]
+
+            this way i could then maybe compare the user input eg:
+
+                    user_input = 1
+                    correct_answer = new_question_list[2]:
+                    if user_input == correct_answer:
+                        correct
+            
+            ''' 
             for key, value in correct_answers.items():
                 if value == "true":
                     correct_answer_key = key
