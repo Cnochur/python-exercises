@@ -1,3 +1,6 @@
+import time, csv
+
+
 easy_questions = [
     {"question": "What is the primary purpose of a firewall?", "answers": ["To protect against viruses", "To block unauthorized access", "To monitor network traffic", "To improve internet speed"], "correct": 1},
     {"question": "Which of the following is an example of multi-factor authentication?", "answers": ["Username and password", "Password and email", "Password and fingerprint", "Username and security question"], "correct": 2},
@@ -90,18 +93,46 @@ hard_questions = [
     {"question": "What is the primary purpose of a Web Application Firewall (WAF)?", "answers": ["To monitor network traffic", "To detect and block malicious requests to a web application", "To encrypt web traffic", "To provide anti-virus protection"], "correct": 1}
 ]
 
+def load_results(filename="previous-results.csv"):
+    previous_results = []
+
+    try:
+        with open(filename, "r") as file:
+            reader = csv.reader(file)
+            for line in reader:
+                previous_results.append(line)
+    except FileNotFoundError:
+        print('\nStarting fresh...\n')
+
+    return previous_results
+
+def save_result(previous_results, filename="previous-results.csv"):
+    with open(filename, "w", newline="") as file:
+        writer = csv.writer(file)
+        result = ["Name", "Score", "Difficulty", "Date"]
+        for result in previous_results:
+            writer.writerow(result)
+
+def add_result(player_name, score, difficulty, date, previous_results):
+    curr_date = date
+    name = player_name
+    score = score
+    difficulty = "Easy"
+    previous_results.append([name, score, difficulty, curr_date])
+    print("---------------------------------------------")
+    print(f"\nYou scored {score}!\nName: {name}\nScore: {score}\nDifficulty: {difficulty}\nDate: {curr_date}\n")
+    print("---------------------------------------------")
+    
 def welcome():
     print("\n-----Welcome-------------------------------")
     print("-----------------To------------------------")
     print("-----------------------T-QuIzZiL-----------\n")
-def display_score(player_name, score):
-    print("---------------------------------------------")
-    print(f"{player_name}, you scored {score}!")
-    print("---------------------------------------------")
-def quiz(score, player_name, questions_selection):
+
+def quiz(player_name, score, questions_selection, difficulty, previous_results):
 
     in_game = True
     questions = questions_selection
+    curr_date = time.strftime("%a,%H:%M:%S")
 
     while in_game:
 
@@ -122,10 +153,12 @@ def quiz(score, player_name, questions_selection):
             if guess == question['correct']:
                 score += 100
 
-        display_score(player_name, score)
+        save_result(previous_results)
+        add_result(player_name, score, difficulty, curr_date, previous_results)
         in_game = False
 
 def main():
+    previous_results = load_results()
     score = 0
     player_name = input("Enter name: ")
     print("\nWelcome to T-Quizzil, a quiz on cybersecurity!")
@@ -144,11 +177,11 @@ def main():
                     print("Invalid input")
 
             if choice == 1:
-                score = quiz(score, player_name, easy_questions)
+                score = quiz(player_name, score, easy_questions, "Easy", previous_results)
             elif choice == 2:
-                score = quiz(score, player_name, medium_questions)
+                score = quiz(player_name, score, medium_questions, "Mediium", previous_results)
             elif choice == 3:
-                score = quiz(score, player_name, hard_questions)
+                score = quiz(player_name, score, hard_questions, "Hard", previous_results)
             elif choice == 4:
                 print(f"\n....goodbye, {player_name}!\n")
                 break
