@@ -12,7 +12,7 @@ To-dos:
 
 - error handling for answer options
 - export to csv: name, difficulty, score, date?
-- add main menu: display scores, play quiz
+- add main menu: display scores, play quiz ----------- not needed
 - display scores: get and display scores from csv
 
 
@@ -20,3 +20,4 @@ Complete:
 
 - Error handling
 - csv export and load
+- scoreboard option added to current menu option
