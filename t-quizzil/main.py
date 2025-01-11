@@ -122,7 +122,16 @@ def add_result(player_name, score, difficulty, date, previous_results):
     print("---------------------------------------------")
     print(f"\nYou scored {score}!\nName: {name}\nScore: {score}\nDifficulty: {difficulty}\nDate: {curr_date}\n")
     print("---------------------------------------------")
-    
+
+def view_scoreboard(previous_results):
+    if not previous_results:
+        print("\nNothing here....")
+    else:
+        print("\n------ Score Board ------\n")
+        for index, result in enumerate(previous_results, start=1):
+            print(f"{index}) Name: {result[0]} | Score: {result[1]} | Difficulty: {result[2]} | {result[3]}\n")
+        print("\n---------------------------")
+   
 def welcome():
     print("\n-----Welcome-------------------------------")
     print("-----------------To------------------------")
@@ -131,7 +140,7 @@ def welcome():
 def quiz(player_name, score, questions_selection, difficulty, previous_results):
 
     in_game = True
-    score = 0
+    score = score
     questions = questions_selection
     curr_date = time.strftime("%a,%H:%M:%S")
 
@@ -165,7 +174,7 @@ def main():
     print("\nWelcome to T-Quizzil, a quiz on cybersecurity!")
     while True:
         try:
-            print("\nPlease enter difficulty:\n\n1) Easy\n2) Medium \n3) Hard\n4) Exit")
+            print("\nPlease enter difficulty:\n\n1) Easy\n2) Medium \n3) Hard\n4) Score Board\n5) Exit")
             
             while True:
                 try:
@@ -187,6 +196,8 @@ def main():
                 difficulty="Hard"
                 score = quiz(player_name, score, hard_questions, difficulty, previous_results)
             elif choice == 4:
+                view_scoreboard(previous_results)
+            elif choice == 5:
                 print(f"\n....goodbye, {player_name}!\n")
                 break
         except ValueError:
