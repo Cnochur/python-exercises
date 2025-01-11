@@ -14,3 +14,8 @@ To-dos:
 - export to csv: name, difficulty, score, date?
 - add main menu: display scores, play quiz
 - display scores: get and display scores from csv
+
+
+Complete:
+
+- Error handling
