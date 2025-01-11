@@ -117,7 +117,7 @@ def add_result(player_name, score, difficulty, date, previous_results):
     curr_date = date
     name = player_name
     score = score
-    difficulty = "Easy"
+    difficulty = difficulty
     previous_results.append([name, score, difficulty, curr_date])
     print("---------------------------------------------")
     print(f"\nYou scored {score}!\nName: {name}\nScore: {score}\nDifficulty: {difficulty}\nDate: {curr_date}\n")
@@ -131,6 +131,7 @@ def welcome():
 def quiz(player_name, score, questions_selection, difficulty, previous_results):
 
     in_game = True
+    score = 0
     questions = questions_selection
     curr_date = time.strftime("%a,%H:%M:%S")
 
@@ -177,11 +178,14 @@ def main():
                     print("Invalid input")
 
             if choice == 1:
-                score = quiz(player_name, score, easy_questions, "Easy", previous_results)
+                difficulty="Easy"
+                score = quiz(player_name, score, easy_questions, difficulty, previous_results)
             elif choice == 2:
-                score = quiz(player_name, score, medium_questions, "Mediium", previous_results)
+                difficulty="Medium"
+                score = quiz(player_name, score, medium_questions, difficulty, previous_results)
             elif choice == 3:
-                score = quiz(player_name, score, hard_questions, "Hard", previous_results)
+                difficulty="Hard"
+                score = quiz(player_name, score, hard_questions, difficulty, previous_results)
             elif choice == 4:
                 print(f"\n....goodbye, {player_name}!\n")
                 break
